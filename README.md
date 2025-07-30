@@ -24,31 +24,24 @@
 
 근전도(EMG) 신호를 통해 근육의 수축 유무 및 정도를 실시간으로 측정하고,  
 해당 신호가 특정 기준 이상일 경우 음향 출력을 통해 반응을 제공한다.
+ 
+&nbsp;
 
+### 🎯 기획 의도
 
----
-
-## 🎯 기획 의도
-
-- **근육 기능이 저하된 환자**의 상태를 판단하고, 일정 회복 수준 도달 여부를 직관적으로 전달
+- 근육 기능이 저하된 환자의 상태를 판단하고, 일정 회복 수준 도달 여부를 직관적으로 전달
 - 비침습적인 근전도 측정을 통해 재활 가능성을 평가하고, 훈련 동기를 제공
-- 생체신호 기반의 인터페이스를 활용하여 **의사소통 또는 반응 보조 장치**로도 활용 가능
+- 생체신호 기반의 인터페이스를 활용하여 의사소통 또는 반응 보조 장치로도 활용 가능
+  
+&nbsp;
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/f48e8c97-4ac4-41ff-b5e2-11432cd82aee" width="450"/>
-</p>
+### 🏭 기존 기술의 활용과 확장 가능성
 
----
+- 표면 근전도 측정 기술을 활용하여 피부 위에 전극을 부착하고 전기적 신호를 분석
+- EMG 신호를 증폭 회로(Amplifier)를 통해 5V 이상으로 증폭 시, 피드백 음성 출력 구현
+- 인체의 공명 주파수(Resonance Frequency)를 고려한 신호 해석으로 정확한 판단 기반 확보
 
-## 🏭 기존 기술의 활용과 확장 가능성
-
-- **표면 근전도 측정 기술**을 활용하여 피부 위에 전극을 부착하고 전기적 신호를 분석
-- EMG 신호를 **증폭 회로(Amplifier)**를 통해 5V 이상으로 증폭 시, **피드백 음성 출력** 구현
-- 인체의 공명 주파수(Resonance Frequency)를 고려한 신호 해석으로 **정확한 판단 기반 확보**
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/63167a14-c075-4208-ad3d-a1e8fd1e7239" width="600"/>
-</p>
+&nbsp;
 
 ### ✅ 확장 가능성
 
@@ -57,21 +50,38 @@
 - **뇌-근육-기계 인터페이스 연구의 기초 자료**로 활용 가능
 - 고령자나 환자의 **자가 운동 추적 및 피드백 장치**로 확장 가능
 
----
 
 
 &nbsp;
 ## 2. 🔧 구성 요소
 
-| 구성 요소                           | 설명                                                                                         | 
+| 구성 요소                           | 설명                                                                                         |
 |------------------------------------|----------------------------------------------------------------------------------------------|
-| **Unity 2022.3 LTS**                          | 자율주행 시스템 전체 시뮬레이션을 구성하는 데 사용된 엔진. 물리 기반 시뮬레이션 및 Raycast 활용. |
-| **SimplePoly City – Low Poly Assets** | 경량 도시 환경을 구성하기 위한 로우 폴리 모델 패키지. CPU/GPU 성능을 최적화하며 다양한 도로, 건물, 환경 요소 포함. |
-
-<img width="1299" height="719" alt="image" src="https://github.com/user-attachments/assets/f8dc8a55-2078-4ec2-a6f0-f4e6bb257af4" />
+| 1N4002 다이오드                    | 정류 및 역전압 보호용 일반 다이오드                                                         |
+| 도시바 9V 건전지                   | 회로 전원 공급용 전원 소자                                                                  |
+| TL082CP 오퍼앰프                   | 저잡음, 듀얼 연산 증폭기. 생체 신호 증폭 회로에 사용                                        |
+| Round IC Socket (08P, 14P)         | IC 칩 탈부착을 용이하게 하기 위한 소켓                                                      |
+| AT-1750-TFL-LW95-R                 | 생체 신호 증폭 후 조건 만족 시 소리 출력용 스피커                                          |
+| EIC-106 회로보드                   | 전체 회로 구성 및 납땜용 기판                                                                |
+| 100uF 6.3V 전해콘덴서              | 전원 노이즈 제거 및 신호 안정화용                                                           |
+| LM339 비교기                       | 입력 신호와 기준값을 비교하여 디지털 신호로 변환                                           |
+| PCB 보드 (Dual Half Size)         | 실험용 회로 구성 시 아두이노/모듈 장착용 브레드보드                                         |
+| AD620BNZ 인스트루멘테이션 앰프     | 고정밀 생체 신호 증폭용. 전극 간 미세 전위차 증폭에 사용                                    |
 
 
 &nbsp;
+
+<img width="1328" height="908" alt="image" src="https://github.com/user-attachments/assets/19d921d6-f596-4d88-84ec-da9a4cb9e17d" />
+
+<img width="1208" height="876" alt="image" src="https://github.com/user-attachments/assets/38f5e0eb-e1c6-4f36-921f-bebbebef0af9" />
+
+<img width="1345" height="284" alt="image" src="https://github.com/user-attachments/assets/dea76b85-a19a-4cce-b183-d5ad14f5ba2d" />
+
+
+&nbsp;
+<img width="821" height="280" alt="image" src="https://github.com/user-attachments/assets/3ebcf197-adfd-4b89-9ded-90b3fcc41b4e" />
+
+<img width="928" height="416" alt="image" src="https://github.com/user-attachments/assets/fb95ef9d-be8b-49e3-a99e-9eb19074e23f" />
 
 ## 3. 💻 사용 기술
 
@@ -90,6 +100,7 @@
 
 &nbsp;
 ## 4. 🧭 동작 흐름 요약
+<img width="1272" height="618" alt="image" src="https://github.com/user-attachments/assets/67413147-9c72-4b5e-aa2a-0a3404333f03" />
 
 ### 🏥 1. 병원 시스템 (Hospital System)
 
