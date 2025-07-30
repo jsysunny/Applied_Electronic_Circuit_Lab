@@ -101,6 +101,7 @@
 ## 4. 🧭 동작 흐름 요약
 <img width="1272" height="618" alt="image" src="https://github.com/user-attachments/assets/67413147-9c72-4b5e-aa2a-0a3404333f03" />
 
+### 1. 
 <img width="1298" height="728" alt="image" src="https://github.com/user-attachments/assets/94a0cd66-6a6a-4011-8f94-2af5497a62a9" />
 
 &nbsp;
@@ -116,9 +117,13 @@
 
 <img width="973" height="537" alt="image" src="https://github.com/user-attachments/assets/9f5d0020-122f-42a7-9fae-8a28bf5b8452" />
 
+<img width="963" height="538" alt="image" src="https://github.com/user-attachments/assets/a703129f-0cff-4326-bab5-fbe99d8653c0" />
 
+<img width="959" height="530" alt="image" src="https://github.com/user-attachments/assets/75fbd1b8-df51-4b8f-a8a4-b3e54ca312d9" />
 
+<img width="967" height="531" alt="image" src="https://github.com/user-attachments/assets/3c074618-2319-494d-a13a-5a92f2757473" />
 
+<img width="961" height="527" alt="image" src="https://github.com/user-attachments/assets/da5362d5-1c30-4b07-8b8a-f655f03252b6" />
 
 
 
